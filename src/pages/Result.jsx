@@ -1,10 +1,23 @@
 import React from 'react'
 import Button from '../component/Button'
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate, useLocation } from 'react-router-dom'; 
+
 
 
 const Result = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const { age, years, months, days } = location.state || {};
+
+    const totalMonths =` ${years*12 +months}months and ${days} days `
+
+    const totalDays = `${years*365 + days}`
+    
+    const hours = `${totalDays*24} hours`
+
+
+
+
     function handleClick(){
         navigate('/')
     }
@@ -21,8 +34,26 @@ const Result = () => {
       </div>
       
       {/* body */}
-      
-      <div className="p-10 bg-gray-100">
+      <div  className='bg-gray-200 p-6 py-10'>
+
+      {age ? (
+          <p className='text-lg text-center font-serif font-bold'>Your AGE IS:
+          
+          <p className='text-xl text-center font-serif '>{age}</p>
+
+          <p>or</p>
+          <p className='text-xl text-center font-serif '>{totalMonths}</p>
+          <p>or</p>
+          <p className='text-xl text-center font-serif '>{totalDays} days</p>
+          <p>or</p>
+          <p className='text-xl text-center font-serif '>{hours}</p>
+          </p>
+          
+        ) : (
+          <p className='text-lg text-center text-red-500'>No age data available.</p>
+        )} 
+        </div>     
+      <div className="p-1 bg-gray-100">
         
       <Button onClick={handleClick} children={"BACK"}/>
 

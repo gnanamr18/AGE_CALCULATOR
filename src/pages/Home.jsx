@@ -41,8 +41,10 @@ const Home = () => {
     }
 
     // Set the calculated age
+    const calculatedAge = ` ${years} years, ${months} months, and ${days} days`;
+
     setAge(`Age: ${years} years, ${months} months, and ${days} days`);
-    navigate('/result',age)
+    navigate('/result',{ state:  { age: calculatedAge,years,months,days } })
   };
   console.log(age)
 
