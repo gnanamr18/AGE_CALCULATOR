@@ -50,7 +50,7 @@ const Home = () => {
     <div className='h-screen w-full  flex flex-col  items-center justify-center  bg-violet-800'>
       
       {/* Home */}
-      <div className='max-w-xl w-full  mx-auto p-14  mb-35 border rounded-lg shadow-lg bg-yellow-400'>
+      <div className='max-w-xl w-full  mx-auto p-14 mb-20   border rounded-lg shadow-lg bg-yellow-400'>
       {/* heading */}
       
       <div className='bg-green-800 w-full  text-white text-center  px-4 py-2 text-2xl '>
