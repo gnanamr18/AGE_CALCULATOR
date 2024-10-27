@@ -15,7 +15,6 @@ const Home = () => {
     const currentDate = new Date(ageDate);
 
 
-    console.log(birthDate,currentDate)
     if (birthDate > currentDate) {
       alert('Birth date cannot be greater than the current date!',);     
       return; 
@@ -46,7 +45,6 @@ const Home = () => {
     setAge(`Age: ${years} years, ${months} months, and ${days} days`);
     navigate('/result',{ state:  { age: calculatedAge,years,months,days } })
   };
-  console.log(age)
 
   return (
     <div className='h-screen w-full  flex flex-col  items-center justify-center  bg-violet-800'>
