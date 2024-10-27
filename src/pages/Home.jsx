@@ -52,7 +52,7 @@ const Home = () => {
     <div className='h-screen w-full  flex flex-col  items-center justify-center  bg-violet-800'>
       
       {/* Home */}
-      <div className='max-w-xl w-full  mx-auto p-10 border rounded-lg shadow-lg bg-yellow-400'>
+      <div className='max-w-xl w-full  mx-auto p-14  mb-35 border rounded-lg shadow-lg bg-yellow-400'>
       {/* heading */}
       
       <div className='bg-green-800 w-full  text-white text-center  px-4 py-2 text-2xl '>
@@ -61,7 +61,7 @@ const Home = () => {
       
       {/* body */}
       
-      <div className="p-10 bg-gray-100">
+      <div className="p-14 bg-gray-300">
         {/* birthdate div */}
       <div className="flex flex-col mb-5">
           <label className="text-black font-bold mb-1">DATE OF BIRTH</label>
@@ -88,7 +88,6 @@ const Home = () => {
       </div>
     
     </div>
-    <ToastContainer />
 
     </div>
   );
