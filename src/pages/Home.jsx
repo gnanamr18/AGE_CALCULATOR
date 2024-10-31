@@ -42,8 +42,8 @@ const Home = () => {
     // Set the calculated age
     const calculatedAge = ` ${years} years, ${months} months, and ${days} days`;
 
-    setAge(`Age: ${years} years, ${months} months, and ${days} days`);
-    navigate('/result',{ state:  { age: calculatedAge,years,months,days } })
+    // setAge(`Age: ${years} years, ${months} months, and ${days} days`);
+    navigate('/result',{ state:  { age: calculatedAge,years,months,days,birthDate,currentDate } })
   };
 
   return (
@@ -59,9 +59,9 @@ const Home = () => {
       
       {/* body */}
       
-      <div className="p-14 bg-gray-300">
+      <div className="p-14 bg-gray-300  gap-5 flex flex-col sm:flex-row">
         {/* birthdate div */}
-      <div className="flex flex-col mb-5">
+      <div className=" flex flex-col mb-5">
           <label className="text-black font-bold mb-1">DATE OF BIRTH</label>
           <input
             type="date"
@@ -80,9 +80,12 @@ const Home = () => {
             className="p-2 border rounded w-full"
           />
       </div>
-      <Button onClick={handleClick} children={"CALCULATE"}/>
+      
 
       
+      </div>
+      <div className='py-5'>
+      <Button  onClick={handleClick} children={"CALCULATE"}/>
       </div>
     
     </div>

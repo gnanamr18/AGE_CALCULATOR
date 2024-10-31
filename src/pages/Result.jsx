@@ -7,11 +7,14 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const Result = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { age, years, months, days } = location.state || {};
-
+    const { age, years, months, days,birthDate,currentDate } = location.state || {};
+    
     const totalMonths =` ${years*12 +months}months and ${days} days `
 
-    const totalDays = `${years*365 + days}`
+
+    //calculate days:
+    const timeDiff = currentDate- birthDate
+    const totalDays = Math.floor(timeDiff/(24*60*60*1000)) 
     
     const hours = `${totalDays*24} hours`
 
@@ -19,7 +22,7 @@ const Result = () => {
 
 
     function handleClick(){
-        navigate('/')
+        navigate('/',{ replace: true })
     }
   return (
     <div>
